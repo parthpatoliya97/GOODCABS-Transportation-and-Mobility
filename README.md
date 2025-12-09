@@ -1,10 +1,12 @@
 # GOODCABS Operational Performance & Passenger Analysis
 
+
 ## 📌 Project Overview :
 
 - Goodcabs is a fast-growing cab service company operating across ten tier-2 cities in India. Established two years ago, the company differentiates itself by empowering local drivers and delivering an excellent passenger experience. As part of its 2024 strategic growth plan, Goodcabs aims to evaluate key performance metrics across its transportation operations.
 
 - This Power BI project provides actionable insights for the Chief of Operations to support data-driven decision-making around trip performance, driver efficiency, and passenger satisfaction.
+
 
 ## Problem Statement :
 
