@@ -29,4 +29,8 @@ focusing on:
 
 ----------------------------------------
 
+## Data Model View :
 
+![goodcabs data model view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Data%20Model%20View.png?raw=true)
+
+----------------------
