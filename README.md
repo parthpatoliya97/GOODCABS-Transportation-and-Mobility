@@ -316,7 +316,8 @@ Identify the top 3 and bottom 3 cities by total trips over the entire analysis p
     ORDER BY total_trips 
     LIMIT 3;
 ```
-
+![top 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/top_3_city_by_total_trips.png?raw=true)
+![bottom 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/bottom_3_city_by_total_trips.png?raw=true)
 
 
 
@@ -342,8 +343,11 @@ on c.city_id=s.city_id
 group by c.city_name
 order by repeat_contribution 
 limit 3;
+```
+![city repeat top 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/top_3_city_by_repeat_passenger%25.png?raw=true)
+![city repeat bottom 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/bottom_3_city_by_repeat_passenger%25.png?raw=true)
 
-
+```sql
 select 
 monthname(d.start_of_month) as month_name,
 sum(s.total_passengers) as total,
@@ -355,6 +359,7 @@ join fact_passenger_summary s
 on monthname(d.start_of_month)=monthname(s.month)
 group by monthname(d.start_of_month)
 ```
+![month repeat](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/monthly%20repeat%20passenger%25.png?raw=true)
 
 
 3. Average Ratings by City and Passenger Type
@@ -371,6 +376,8 @@ join dim_city c
 on t.city_id=c.city_id
 group by c.city_name;
 ```
+![passenger rating](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_driver_passenger_rating.png?raw=true)
+
 
 ```sql
 select
@@ -383,6 +390,7 @@ on t.city_id=c.city_id
 group by c.city_name
 order by avg_fare_per_trip desc;
 ```
+![city revenue](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_avg_fare_per_trip.png?raw=true)
 
 ```sql
 select
@@ -398,7 +406,7 @@ on t.date=d.start_of_month
 group by c.city_name,d.day_type
 order by c.city_name;
 ```
-
+![city day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_weekday_weekend_revenue_split.png?raw=true)
 
 ```sql
 select 
@@ -411,6 +419,8 @@ join dim_date d
 on t.date=d.start_of_month
 group by d.day_type;
 ```
+![day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/weekday_weekend_revenue_fare_trip.png?raw=true)
+
 
 ```sql
 select
@@ -423,3 +433,4 @@ join fact_passenger_summary s
 on d.start_of_month=s.month
 group by d.day_type;
 ```
+![day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/weekday_weekend_total_new_repeat_passengers.png?raw=true)
