@@ -34,3 +34,265 @@ focusing on:
 ![goodcabs data model view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Data%20Model%20View.png?raw=true)
 
 ----------------------
+
+#### Business Request - 1: City-Level Fare and Trip Summary Report
+- Generate a report that displays the total trips, average fare per km, average fare per trip, and the percentage contribution of each city's trips to the overall trips. This report will help in assessing trip volume, pricing efficiency, and each city's contribution to the overall trip count.
+
+```sql
+WITH city_stats AS (
+    SELECT
+        c.city_name,
+        COUNT(*) AS total_trips,
+        SUM(t.distance_travelled_km) AS total_travelled_distance,
+        SUM(t.fare_amount) AS total_revenue
+    FROM dim_city c 
+    JOIN fact_trips t 
+        ON c.city_id = t.city_id
+    GROUP BY c.city_name
+)
+SELECT 
+    city_name,
+    total_trips,
+    ROUND(total_revenue / total_travelled_distance, 2) AS avg_fare_per_km,
+    ROUND(total_revenue / total_trips, 2) AS avg_fare_per_trip,
+    ROUND(total_trips*100 / (SELECT COUNT(*) FROM fact_trips), 2) AS contribution_to_total_trips
+FROM city_stats;
+```
+![request 1](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Business%20Request-1.png?raw=true)
+
+------------------------------------
+
+#### Business Request - 2: Monthly City-Level Trips Target Performance Report
+- Generate a report that evaluates the target performance for trips at the monthly and city level. For each city and month, compare the actual total trips with the target trips and categorise the performance as follows:
+
+- If actual trips are greater than target trips, mark it as "Above Target".
+
+- If actual trips are less than or equal to target trips, mark it as "Below Target".
+
+- Additionally, calculate the % difference between actual and target trips to quantify the performance gap.
+
+```sql
+WITH city_stats AS (
+    SELECT
+        MONTHNAME(t.date) AS month_name, 
+        c.city_id,
+        c.city_name,
+        COUNT(*) AS total_trips
+    FROM
+        dim_city c
+    JOIN
+        fact_trips t ON c.city_id = t.city_id
+    GROUP BY
+        MONTHNAME(t.date),
+        c.city_id,
+        c.city_name
+),
+target_stats AS (
+    SELECT
+        MONTHNAME(target.month) AS month_name, 
+        target.city_id,
+        target.total_target_trips
+    FROM
+        targets_db.monthly_target_trips AS target
+),
+actual_vs_target AS (
+    SELECT
+        cts.city_name,
+        cts.month_name, 
+        cts.total_trips,
+        ts.total_target_trips,
+        (cts.total_trips - ts.total_target_trips) AS actual_difference_gap
+    FROM
+        city_stats cts
+    JOIN
+        target_stats ts
+        ON cts.month_name = ts.month_name AND cts.city_id = ts.city_id 
+)
+SELECT
+    city_name,
+    month_name, 
+    total_trips AS actual_trips,
+    total_target_trips AS target_trips,
+    actual_difference_gap,
+    CASE
+        WHEN total_trips > total_target_trips THEN 'Above_Target'
+        ELSE 'Below_Target'
+    END AS performance_status
+FROM
+    actual_vs_target
+ORDER BY
+    month_name; 
+```
+![january target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/January%20target_vs_actuals.png?raw=true)
+![february target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/February_target_vs_actuals.png?raw=true)
+![March target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/March_target_vs_actuals.png?raw=true)
+![april target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/April_target_vs_actuals.png?raw=true)
+![may target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/May_target_vs_actuals.png?raw=true)
+![june target vs actuals](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/June_target_vs_actuals.png?raw=true)
+
+-----------------------
+
+#### Business Request - 3: City-Level Repeat Passenger Trip Frequency Report
+- Generate a report that shows the percentage distribution of repeat passengers by the number of trips they have taken in each city. Calculate the percentage of repeat passengers who took 2 trips, 3 trips, and so on, up to 10 trips. Each column should represent a trip count category, displaying the percentage of repeat passengers who fall into that category out of the total repeat passengers for that city.
+
+- Fields: city_name, 2-Trips, 3-Trips, 4-Trips, 5-Trips, 6-Trips, 7-Trips, 8-Trips, 9-Trips, 10-Trips
+
+```sql
+with trips as(
+select 
+	c.city_name,
+    sum(rtp.repeat_passenger_count) as total_trips,
+    sum(case when rtp.trip_count='2-Trips' then repeat_passenger_count end) as two_trips,
+     sum(case when rtp.trip_count='3-Trips' then repeat_passenger_count end) as three_trips,
+      sum(case when rtp.trip_count='4-Trips' then repeat_passenger_count end) as four_trips,
+       sum(case when rtp.trip_count='5-Trips' then repeat_passenger_count end) as five_trips,
+        sum(case when rtp.trip_count='6-Trips' then repeat_passenger_count end) as six_trips,
+         sum(case when rtp.trip_count='7-Trips' then repeat_passenger_count end) as seven_trips,
+          sum(case when rtp.trip_count='8-Trips' then repeat_passenger_count end) as eight_trips,
+           sum(case when rtp.trip_count='9-Trips' then repeat_passenger_count end) as nine_trips,
+            sum(case when rtp.trip_count='10-Trips' then repeat_passenger_count end) as ten_trips
+from dim_repeat_trip_distribution  rtp
+join dim_city c 
+on rtp.city_id=c.city_id
+group by c.city_name
+)
+select
+city_name,
+round(two_trips/total_trips*100,2) as Trip_2,
+round(three_trips/total_trips*100,2) as Trip_3,
+round(four_trips/total_trips*100,2) as Trip_4,
+round(five_trips/total_trips*100,2) as Trip_5,
+round(six_trips/total_trips*100,2) as Trip_6,
+round(seven_trips/total_trips*100,2) as Trip_7,
+round(eight_trips/total_trips*100,2) as Trip_8,
+round(nine_trips/total_trips*100,2) as Trip_9,
+round(ten_trips/total_trips*100,2) as Trip_10
+from trips;
+```
+![business request 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Business%20Request%203.png?raw=true)
+
+---------------------------
+
+#### Business Request - 4: Identify Cities with Highest and Lowest Total New Passengers
+- Generate a report that calculates the total new passengers for each city and ranks them based on this value. Identify the top 3 cities with the highest number of new passengers as well as the bottom 3 cities with the lowest number of new passengers, categorising them as "Top 3" or "Bottom 3" accordingly.
+
+```sql
+select
+c.city_name,
+sum(s.total_passengers) as total_passengers,
+sum(s.new_passengers) as new_passengers,
+round(sum(s.new_passengers)/sum(s.total_passengers)*100,2) as new_passenger_pct
+from fact_passenger_summary s 
+join dim_city c 
+on s.city_id=c.city_id
+group by c.city_name
+order by sum(s.new_passengers) asc
+limit 3;
+```
+![top 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/business%20reuqest%204%20top%203%20city.png?raw=true)
+![bottom 3 ](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/business%20request%204%20bottom%203%20city.png?raw=true)
+
+------------------------------------------
+
+#### Business Request - 5: Identify Month with Highest Revenue for Each City
+- Generate a report that identifies the month with the highest revenue for each city. For each city, display the month_name, the revenue amount for that month, and the percentage contribution of that month's revenue to the city's total revenue.
+
+```sql
+WITH monthly_revenue AS (
+    -- Step 1: Calculate revenue per city, per month
+    SELECT
+        c.city_name,
+        MONTHNAME(t.date) AS month_name,
+        SUM(t.fare_amount) AS monthly_revenue
+    FROM
+        fact_trips t
+    JOIN
+        dim_city c ON t.city_id = c.city_id
+    GROUP BY
+        c.city_name,
+        MONTHNAME(t.date) 
+),
+city_total_revenue AS (
+    SELECT
+        c.city_name,
+        SUM(t.fare_amount) AS total_city_revenue
+    FROM
+        fact_trips t
+    JOIN
+        dim_city c ON t.city_id = c.city_id
+    GROUP BY
+        c.city_name 
+),
+revenue_ranking as(
+SELECT
+    mr.city_name,
+    mr.month_name,
+    mr.monthly_revenue AS revenue,
+    ROUND(mr.monthly_revenue / ctr.total_city_revenue * 100, 2) AS revenue_share,
+    dense_rank() over(partition by mr.city_name order by mr.monthly_revenue desc) as rnk
+FROM
+    monthly_revenue mr
+JOIN
+    city_total_revenue ctr ON mr.city_name = ctr.city_name
+)
+select 
+city_name,
+month_name,
+revenue,
+revenue_share
+from revenue_ranking 
+where rnk=1;
+
+```
+![request 5](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/business%20request%205.png?raw=true)
+
+--------------------------------------
+
+#### Business Request - 6: Repeat Passenger Rate Analysis
+- Generate a report that calculates two metrics:
+
+- Monthly Repeat Passenger Rate: Calculate the repeat passenger rate for each city and month by comparing the number of repeat passengers to the total passengers.
+
+- City-wide Repeat Passenger Rate: Calculate the overall repeat passenger rate for each city, considering all passengers across months.
+
+```sql
+WITH monthly_stats AS (
+    SELECT
+        s.city_id,
+        c.city_name,
+        s.month,
+        MONTHNAME(s.month) AS month_name,
+        s.total_passengers,
+        s.repeat_passengers,
+        ROUND(s.repeat_passengers * 100.0 / s.total_passengers, 2) AS monthly_repeat_passenger_rate
+    FROM
+        fact_passenger_summary s
+    JOIN
+        dim_city c ON s.city_id = c.city_id
+)
+SELECT
+    city_name,
+    month_name AS month,
+    total_passengers,
+    repeat_passengers,
+    monthly_repeat_passenger_rate,
+    ROUND(
+        SUM(repeat_passengers) OVER (PARTITION BY city_name) * 100.0 /
+        SUM(total_passengers) OVER (PARTITION BY city_name),
+    2) AS city_repeat_passenger_rate
+FROM
+    monthly_stats
+ORDER BY
+    city_name,
+    month; 
+```
+![luck](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Lucknow%20repeat%20passengers.png?raw=true)
+![mysore](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Mysore%20repeat%20passengers.png?raw=true)
+![chandi](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/chandigarh%20repeat%20passengers.png?raw=true)
+![coimb](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/coimbatore%20repeat%20passengers.png?raw=true)
+![indore](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/indore%20repeat%20passengers.png?raw=true)
+![jaipur](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/jaipur%20repeat%20passengers.png?raw=true)
+![kochi](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/kochi%20repeat%20passengers.png?raw=true)
+![surat](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/surat%20repeat%20passengers.png?raw=true)
+![vadodara](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/vadodara%20repeat%20passengers.png?raw=true)
+![visakha](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/visakhapatnam%20repeat%20passengers.png?raw=true)
