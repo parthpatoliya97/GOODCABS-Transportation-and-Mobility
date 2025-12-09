@@ -302,4 +302,124 @@ ORDER BY
 
 ------------------
 
+1. Top and Bottom Performing Cities
+Identify the top 3 and bottom 3 cities by total trips over the entire analysis period.
 
+```sql
+    SELECT
+        c.city_name,
+        COUNT(*) AS total_trips
+    FROM dim_city c 
+    JOIN fact_trips t 
+        ON c.city_id = t.city_id
+    GROUP BY c.city_name
+    ORDER BY total_trips 
+    LIMIT 3;
+```
+
+
+
+
+
+
+
+
+8. Highest and Lowest Repeat Passenger Rate (RPR%) by City and Month
+By City: Analyse the Repeat Passenger Rate (RPR%) for each city across the six-month period. Identify the top 2 and bottom 2 cities based on their RPR% to determine which locations have the strongest and weakest rates.
+
+By Month: Similarly, analyse the RPR% by month across all cities and identify the months with the highest and lowest repeat passenger rates.
+
+```sql
+select
+c.city_name,
+sum(s.total_passengers) as total_passengers,
+sum(s.new_passengers) as new_passengers,
+sum(s.repeat_passengers) as repeat_passengers,
+round(sum(s.repeat_passengers)*100/sum(s.total_passengers),2) as repeat_contribution
+from dim_city c 
+join fact_passenger_summary s 
+on c.city_id=s.city_id
+group by c.city_name
+order by repeat_contribution 
+limit 3;
+
+
+select 
+monthname(d.start_of_month) as month_name,
+sum(s.total_passengers) as total,
+sum(s.new_passengers) as new_,
+sum(s.repeat_passengers) as repeat_,
+round(sum(s.repeat_passengers)*100/sum(s.total_passengers),2) repeat_contribution
+from dim_date d 
+join fact_passenger_summary s 
+on monthname(d.start_of_month)=monthname(s.month)
+group by monthname(d.start_of_month)
+```
+
+
+3. Average Ratings by City and Passenger Type
+Calculate the average passenger and driver ratings for each city, segmented by passenger type (new vs. repeat). Identify cities with the highest and lowest average ratings.
+```sql
+select
+c.city_name,
+round(avg(case when t.passenger_type='new' then passenger_rating end),1) new_passenger_rating,
+round(avg(case when t.passenger_type='new' then driver_rating end),1) new_driver_rating,
+round(avg(case when t.passenger_type='repeated' then passenger_rating end),1) repeat_passenger_rating,
+round(avg(case when t.passenger_type='repeated' then driver_rating end),1) repeat_driver_rating
+from fact_trips t 
+join dim_city c 
+on t.city_id=c.city_id
+group by c.city_name;
+```
+
+```sql
+select
+c.city_name,
+round(sum(t.fare_amount)/1000000,2) as revenue,
+round(avg(t.fare_amount),2) as avg_fare_per_trip
+from fact_trips t 
+join dim_city c 
+on t.city_id=c.city_id
+group by c.city_name
+order by avg_fare_per_trip desc;
+```
+
+```sql
+select
+c.city_name,
+d.day_type,
+round(sum(t.fare_amount),2) as revenue,
+round(avg(t.fare_amount),2) as avg_fare_per_trip
+from fact_trips t 
+join dim_city c 
+on t.city_id=c.city_id
+join dim_date d 
+on t.date=d.start_of_month
+group by c.city_name,d.day_type
+order by c.city_name;
+```
+
+
+```sql
+select 
+   d.day_type,
+    ROUND(SUM(t.fare_amount) / 1000000, 2) AS revenue_in_millions,
+    ROUND(AVG(t.fare_amount), 2) AS avg_fare_per_trip,
+	ROUND(SUM(t.fare_amount)/(select sum(fare_amount) from fact_trips)*100,2) as revenue_contribution_pct
+from fact_trips t 
+join dim_date d 
+on t.date=d.start_of_month
+group by d.day_type;
+```
+
+```sql
+select
+d.day_type,
+round(sum(s.total_passengers)/1000000,2) total_passengers,
+round(sum(s.new_passengers)/1000000,2) new_passengers,
+round(sum(s.repeat_passengers)/1000000,2) repeat_passengers
+from dim_date d 
+join fact_passenger_summary s 
+on d.start_of_month=s.month
+group by d.day_type;
+```
