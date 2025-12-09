@@ -62,7 +62,7 @@ Jaipur, Lucknow, and Surat are core revenue centers; Mysore, Coimbatore, and Vis
 
 1.2 Month-wise Trip Demand Trend
 
-Peak Months: January – 70.5K, February – 75.4K
+Peak Months: February – 75.4K
 
 Dip in June: 62.5K (seasonal slowdown)
 
@@ -93,11 +93,16 @@ Short and medium-distance rides dominate—ideal for dynamic pricing and local d
 
 Examples:
 
+
 Jaipur: Weekday 32K vs Weekend 44K → Strong tourism/weekend demand
 
-Lucknow: Weekday-driven (50K vs 15K) → Business commuting hub
-
 Mysore: Weekend-driven (10K vs 6K) → Tourism-centric
+
+kochi : Weekend driven(28k vs 23k) ->Tourism Centric
+
+rest other cities shows the weekdays higher trips due to its business category
+
+Lucknow: Weekday-driven (50K vs 15K) → Business commuting hub
 
 Strategy:
 Categorize cities as Business Cities vs Tourism Cities and optimize driver allocation accordingly.
@@ -126,6 +131,8 @@ Total Revenue Contribution
 Highest: Jaipur – ₹37.21M
 
 Lowest: Coimbatore – ₹3.52M
+
+Mysore is a tourism city but it is only one city compare to other tourism city which has the lowest revenue it is in the bottom 3 revenue 4M
 
 Insight:
 Jaipur is the economic engine for Goodcabs; low-cost cities like Surat and Vadodara need fare restructuring.
@@ -190,11 +197,18 @@ Low-rating cities correlate with weaker customer loyalty and higher churn risk.
 
 Example:
 
+top 3 
 Jaipur: New 46K | Repeat 10K
 
 Kochi: New 26K | Repeat 8K
 
+Chandigarh : New 19k | Repeat 5k
+
+bottom 3 
+
 Surat: New 12K | Repeat 9K
+Vadodara : New 10k | Repeat 4k
+Coimbatore : New 9k | Repeat 3k
 
 Interpretation:
 Some cities rely heavily on new customer acquisition, while others (e.g., Surat) have a balanced mix due to high repeat behavior.
@@ -226,7 +240,13 @@ Repeat customers are the financial backbone—loyalty programs will significantl
 
 Examples:
 
-Jaipur exceeded trip targets by +13.9%
+Jaipur exceeded trip targets by +13.9% but missed the new passengers by -15% 
+
+Kochi achieved the target trips by 2.43% but missed the target passengers by -2.16%
+
+Coimbatore is the only city which achieve the taret trips 0.50% and new passengers by 13.52% and but missed the target rating
+
+Mysore achieved the target trips by 20.28% but missed the passengers by -2.66%
 
 Lucknow underperformed by –10.7%
 
@@ -234,11 +254,25 @@ Surat underperformed by –3.7%
 
 Kochi slightly above target (+2.4%)
 
+Mysore 20.28%
+Jaipur 13.91%
+Kochi 2.43%
+Coimbatore 0.50%
+
+
 New Passenger Target Deviation:
+
+Coimbatore 13.52%
+Surat 10.72%
+Indore 5.41%
+Lucknow 4.23%
+Vadodara 2.29%
 
 Multiple cities fell short (e.g., Jaipur –15%, Chandigarh –10%)
 
 Only a few cities exceeded new passenger targets (Indore +5.4%, Vadodara +2.3%)
+
+jaipur,mysore,kochi achieved the target rating other cities are fall short to achieve it
 
 Insight:
 Growth targets were missed mainly due to new customer acquisition gaps, not trip volume.
@@ -247,7 +281,7 @@ Growth targets were missed mainly due to new customer acquisition gaps, not trip
 
 From image:
 
-Peak Months: Mostly February, March, April
+Peak Months: Mostly February, May, April
 
 Low Months: Mostly June, January
 
