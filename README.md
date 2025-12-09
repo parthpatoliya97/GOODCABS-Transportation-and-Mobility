@@ -151,22 +151,22 @@ select
           sum(case when rtp.trip_count='8-Trips' then repeat_passenger_count end) as eight_trips,
            sum(case when rtp.trip_count='9-Trips' then repeat_passenger_count end) as nine_trips,
             sum(case when rtp.trip_count='10-Trips' then repeat_passenger_count end) as ten_trips
-from dim_repeat_trip_distribution  rtp
-join dim_city c 
-on rtp.city_id=c.city_id
-group by c.city_name
+	from dim_repeat_trip_distribution  rtp
+	join dim_city c 
+	on rtp.city_id=c.city_id
+	group by c.city_name
 )
 select
-city_name,
-round(two_trips/total_trips*100,2) as Trip_2,
-round(three_trips/total_trips*100,2) as Trip_3,
-round(four_trips/total_trips*100,2) as Trip_4,
-round(five_trips/total_trips*100,2) as Trip_5,
-round(six_trips/total_trips*100,2) as Trip_6,
-round(seven_trips/total_trips*100,2) as Trip_7,
-round(eight_trips/total_trips*100,2) as Trip_8,
-round(nine_trips/total_trips*100,2) as Trip_9,
-round(ten_trips/total_trips*100,2) as Trip_10
+	city_name,
+	round(two_trips/total_trips*100,2) as Trip_2,
+	round(three_trips/total_trips*100,2) as Trip_3,
+	round(four_trips/total_trips*100,2) as Trip_4,
+	round(five_trips/total_trips*100,2) as Trip_5,
+	round(six_trips/total_trips*100,2) as Trip_6,
+	round(seven_trips/total_trips*100,2) as Trip_7,
+	round(eight_trips/total_trips*100,2) as Trip_8,
+	round(nine_trips/total_trips*100,2) as Trip_9,
+	round(ten_trips/total_trips*100,2) as Trip_10
 from trips;
 ```
 ![business request 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Business%20Request%203.png?raw=true)
@@ -178,16 +178,19 @@ from trips;
 
 ```sql
 select
-c.city_name,
-sum(s.total_passengers) as total_passengers,
-sum(s.new_passengers) as new_passengers,
-round(sum(s.new_passengers)/sum(s.total_passengers)*100,2) as new_passenger_pct
-from fact_passenger_summary s 
-join dim_city c 
-on s.city_id=c.city_id
-group by c.city_name
-order by sum(s.new_passengers) asc
-limit 3;
+	c.city_name,
+	sum(s.total_passengers) as total_passengers,
+	sum(s.new_passengers) as new_passengers,
+	round(sum(s.new_passengers)/sum(s.total_passengers)*100,2) as new_passenger_pct
+from
+	fact_passenger_summary s 
+join
+	dim_city c on s.city_id=c.city_id
+	group by
+		c.city_name
+	order by
+		sum(s.new_passengers) asc
+	limit 3;
 ```
 ![top 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/business%20reuqest%204%20top%203%20city.png?raw=true)
 ![bottom 3 ](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/business%20request%204%20bottom%203%20city.png?raw=true)
