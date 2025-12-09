@@ -6,7 +6,7 @@
 
 - This Power BI project provides actionable insights for the Chief of Operations to support data-driven decision-making around trip performance, driver efficiency, and passenger satisfaction.
 
-## 📘 Problem Statement :
+## Problem Statement :
 
 Goodcabs has set ambitious 2024 performance targets to expand its market presence in the Indian transportation and mobility sector. To support these goals, the Chief of Operations (Bruce Haryali) requires a detailed analysis of the company’s operational performance, 
 focusing on:
@@ -25,4 +25,4 @@ focusing on:
 
 -  Operational Performance KPIs
 
-
+----------------------------------------
