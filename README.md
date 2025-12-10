@@ -29,9 +29,9 @@ focusing on:
 
 ----------------------------------------
 
-### 🔷 1. Trip Performance Insights : 
+## 🔷 1. Trip Performance Insights : 
 
-#### Trip Distribution by City
+### Trip Distribution by City
 
 - Top-performing cities by total trips:
 
@@ -60,7 +60,7 @@ focusing on:
 #### Observation:
 - Jaipur, Lucknow, and Surat are core revenue centers / Mysore, Coimbatore, and Visakhapatnam require targeted interventions to boost demand.
 
-#### Month-wise Trip Demand Trend 
+### Month-wise Trip Demand Trend 
 
 - Peak Month : February – 75.4K
 
@@ -69,7 +69,7 @@ focusing on:
 #### Implication:
 - Demand consistently softens toward the later months, indicating potential seasonality or competition impact.
 
-#### Weekday vs Weekend Trips
+### Weekday vs Weekend Trips
 
 - Weekdays: 238K (44%)
 
@@ -78,7 +78,7 @@ focusing on:
 #### Insight:
 Weekends drive higher trip activity—marketing and pricing strategies should be weekend-focused.
 
-#### Trip Distribution by Category
+### Trip Distribution by Category
 
 - Medium Trips: 182K (43%)
 
@@ -89,7 +89,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 #### Implication:
 - Short and medium-distance rides dominate—ideal for dynamic pricing and local driver staffing optimization.
 
-#### City Performance by Day Type
+### City Performance by Day Type
 
 - Jaipur: Weekday 32K vs Weekend 44K → Strong tourism/weekend demand
 
@@ -102,7 +102,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 #### Strategy :
 - Categorize cities as Business Cities vs Tourism Cities and optimize driver allocation accordingly.
 
-#### Fare, Distance & Revenue
+### Fare, Distance & Revenue
 
 - Average Fare Per Trip
 
@@ -133,7 +133,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 #### Insight :
 - Jaipur is the economic engine for Goodcabs / low-cost cities like Surat and Vadodara need fare restructuring.
 
-#### Monthly Revenue Trend
+### Monthly Revenue Trend
 
 - Peak: February – ₹19.9M
 
@@ -141,7 +141,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 
 - Revenue follows trip demand — highlighting seasonal fluctuation.
 
-#### Driver Rating by City
+### Driver Rating by City
 
 - Top Rated: Kochi, Visakhapatnam, Jaipur, Mysore – 8.9
 
@@ -149,9 +149,9 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 
 ---------------------------------------
 
-#### 🔷 2. Passenger Performance Insights
+## 🔷 2. Passenger Performance Insights
 
-#### Repeat Passenger Rate by City
+### Repeat Passenger Rate by City
 
 - Top repeat-passenger cities:
 
@@ -180,7 +180,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 Insight :
 - Despite Jaipur having the highest trips, its repeat passenger rate is very low, indicating service gaps or fare sensitivity.
 
-#### Passenger Rating by City
+### Passenger Rating by City
 
 - Highest: Mysore, Jaipur, Kochi, Visakhapatnam – 8.6
 
@@ -189,7 +189,7 @@ Insight :
 #### Insight:
 - Low-rating cities correlate with weaker customer loyalty and higher churn risk.
 
-#### New vs Repeat Passengers (City-wise)
+### New vs Repeat Passengers (City-wise)
 
 #### Top 3 Cities :
 
@@ -208,14 +208,14 @@ Insight :
 - Coimbatore : New 9k | Repeat 3k
 
 
-#### New vs Repeat Passengers (Monthly)
+### New vs Repeat Passengers (Monthly)
 
 - New passengers decline from 36K → 22K
 
 - Repeat passengers grow from 8K → 12K (Jan–May)
 
 
-#### Revenue & Trips Contribution
+### Revenue & Trips Contribution
 
 - Repeat passengers contribute more revenue (51%) than new passengers (49%)
 
@@ -230,51 +230,65 @@ Insight :
 
 -------------------------
 
-#### 🔷 3. Target & Operational Performance Insights :
+## 🔷 3. Target & Operational Performance Insights :
 
-#### City-level Target Achievement 
+### City-level Target Achievement 
 
-Jaipur exceeded trip targets by +13.9% but missed the new passengers by -15% 
+#### 1️⃣ Trip Target Achievement
 
-Kochi achieved the target trips by 2.43% but missed the target passengers by -2.16%
+- Top Performing Cities : These cities exceeded their trip targets, showing strong operational efficiency:
 
-Coimbatore is the only city which achieve the taret trips 0.50% and new passengers by 13.52% and but missed the target rating
+    - Mysore: +20.28% (+2,738 trips) 
 
-Mysore achieved the target trips by 20.28% but missed the passengers by -2.66%
+    - Jaipur: +13.91% (+9,388 trips) — Strong performance
 
-Lucknow underperformed by –10.7%
+    - Kochi: +2.43% (+1,202 trips)
 
-Surat underperformed by –3.7%
+    - Coimbatore: +0.50% (+104 trips)
 
-Kochi slightly above target (+2.4%)
+- Underperforming Cities : These cities did not meet their trip targets:
 
-- by Total Trips :
-    - Mysore 20.28%
-    - Jaipur 13.91%
-    - Kochi 2.43%
-    - Coimbatore 0.50%
+    - Vadodara: –14.60% (–5,474 trips) — Lowest performance
 
+    - Lucknow: –10.70% (–7,701 trips)
 
-New Passenger Target Deviation:
+    - Surat: –3.70% (–2,157 trips)
 
-- by Total New Passengers
-    - Coimbatore 13.52%
-    - Surat 10.72%
-    - Indore 5.41%
-    - Lucknow 4.23%
-    - Vadodara 2.29%
+    - Indore: –2.40% (–1,044 trips)
 
-Multiple cities fell short (e.g., Jaipur –15%, Chandigarh –10%)
+#### 2️⃣ New Passenger Target Achievement
 
-Only a few cities exceeded new passenger targets (Indore +5.4%, Vadodara +2.3%)
+- Top Performing Cities : These cities exceeded their new passenger acquisition targets:
 
-by Passenger Rating
+    - Coimbatore: +13.52% (+1,014 passengers) — Best performer
 
-- jaipur,mysore,kochi achieved the target rating
-- other cities are fall short to achieve it
+    - Surat: +10.72% (+1,126 passengers)
 
-Insight:
-Growth targets were missed mainly due to new customer acquisition gaps, not trip volume.
+    - Indore: +5.41% (+763 passengers)
+
+    - Lucknow: +4.23% (+660 passengers)
+
+    - Vadodara: +2.29% (+227 passengers)
+
+- Cities Falling Short : These cities missed their new passenger targets:
+
+    - Jaipur: –15% (–8,144 passengers) — Largest shortfall
+
+    - Chandigarh: –10% (–2,092 passengers)
+
+#### 🌟 Key Insight
+
+- Coimbatore is the only city that achieved both:
+
+    - Trip targets: +0.50%
+
+    - New passenger targets: +13.52%
+
+#### 3️⃣ Passenger Rating Target Achievement
+
+- Achieved Target Rating : Jaipur, Mysore, Kochi
+
+- Missed Rating Targets : Most other cities, including Coimbatore despite strong trip and passenger performance.
 
 #### Demand Seasonality by City
 
@@ -308,7 +322,7 @@ Some cities have high multi-trip repeat potential—ideal for subscription plans
     - Tourism: 183K (43%)
 
 Insight:
-Business cities drive stable weekday revenue; tourism cities fuel weekend and seasonal peaks.
+Business cities drive stable weekday revenue / tourism cities fuel weekend and seasonal peaks.
 
 #### Target Summary (Company-Level)
 
