@@ -842,3 +842,32 @@ on d.start_of_month=s.month
 group by d.day_type;
 ```
 ![day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/weekday_weekend_total_new_repeat_passengers.png?raw=true)
+
+------------------------
+
+## Dashboard View :-
+
+Live Dashboard Link :- [Click Here](https://app.powerbi.com/view?r=eyJrIjoiNDIyZGM1MDAtZTgyOC00NWQ1LThmM2YtMTA3MmMwZmUzNDEyIiwidCI6IjJhYmVkYTA4LTMyOGEtNGFlMy1iYTg1LThiNzIxZmE1Mzg3OSJ9)
+
+### Data Model View :
+![data model](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Data%20Model%20View.png?raw=true)
+
+-------------
+
+### Home Page View :
+![Home Page](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Home%20Page.png?raw=true)
+
+----------------
+
+### Trips View :-
+![Trips view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Trips%20View.png?raw=true)
+
+--------------
+
+### Passenger View :-
+![passenger view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Passenger%20View.png?raw=true)
+
+----------------
+
+### Target View :-
+![target view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Target%20View.png?raw=true)
