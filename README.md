@@ -68,18 +68,12 @@ focusing on:
 
 - Dip in June: 62.5K (seasonal slowdown)
 
-#### Implication:
-- Demand consistently softens toward the later months, indicating potential seasonality or competition impact.
-
 -----------------------------
 ### Weekday vs Weekend Trips
 
 - Weekdays: 238K (44%)
 
 - Weekends: 188K (56%)
-
-#### Insight:
-Weekends drive higher trip activity—marketing and pricing strategies should be weekend-focused.
 
 ----------------------------
 
@@ -137,7 +131,7 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 
     - Lowest: Coimbatore – ₹3.52M
 
-- Mysore is a tourism city, but compared to other tourism hubs, it ranks in the bottom 3 with the lowest revenue at just 4M.
+- Mysore is a tourism city, but compared to other tourism hubs, it ranks in the bottom 3 among all with the lowest revenue at just 4M.
 
 #### Insight :
 - Jaipur is the economic engine for Goodcabs / low-cost cities like Surat and Vadodara need fare restructuring.
