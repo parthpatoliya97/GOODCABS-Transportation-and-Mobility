@@ -60,6 +60,8 @@ focusing on:
 #### Observation:
 - Jaipur, Lucknow, and Surat are core revenue centers / Mysore, Coimbatore, and Visakhapatnam require targeted interventions to boost demand.
 
+----------------------
+
 ### Month-wise Trip Demand Trend 
 
 - Peak Month : February – 75.4K
@@ -69,6 +71,7 @@ focusing on:
 #### Implication:
 - Demand consistently softens toward the later months, indicating potential seasonality or competition impact.
 
+-----------------------------
 ### Weekday vs Weekend Trips
 
 - Weekdays: 238K (44%)
@@ -77,6 +80,8 @@ focusing on:
 
 #### Insight:
 Weekends drive higher trip activity—marketing and pricing strategies should be weekend-focused.
+
+----------------------------
 
 ### Trip Distribution by Category
 
@@ -88,6 +93,8 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 
 #### Implication:
 - Short and medium-distance rides dominate—ideal for dynamic pricing and local driver staffing optimization.
+
+-------------------------------
 
 ### City Performance by Day Type
 
@@ -101,6 +108,8 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 
 #### Strategy :
 - Categorize cities as Business Cities vs Tourism Cities and optimize driver allocation accordingly.
+
+----------------------------------
 
 ### Fare, Distance & Revenue
 
@@ -133,6 +142,8 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 #### Insight :
 - Jaipur is the economic engine for Goodcabs / low-cost cities like Surat and Vadodara need fare restructuring.
 
+-----------------------------
+
 ### Monthly Revenue Trend
 
 - Peak: February – ₹19.9M
@@ -140,6 +151,8 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 - Lowest: June – ₹15.4M
 
 - Revenue follows trip demand — highlighting seasonal fluctuation.
+
+---------------------------------
 
 ### Driver Rating by City
 
@@ -180,6 +193,8 @@ Weekends drive higher trip activity—marketing and pricing strategies should be
 Insight :
 - Despite Jaipur having the highest trips, its repeat passenger rate is very low, indicating service gaps or fare sensitivity.
 
+----------------------------
+
 ### Passenger Rating by City
 
 - Highest: Mysore, Jaipur, Kochi, Visakhapatnam – 8.6
@@ -188,6 +203,8 @@ Insight :
 
 #### Insight:
 - Low-rating cities correlate with weaker customer loyalty and higher churn risk.
+
+----------------------------
 
 ### New vs Repeat Passengers (City-wise)
 
@@ -207,6 +224,7 @@ Insight :
   
 - Coimbatore : New 9k | Repeat 3k
 
+------------------------
 
 ### New vs Repeat Passengers (Monthly)
 
@@ -214,6 +232,7 @@ Insight :
 
 - Repeat passengers grow from 8K → 12K (Jan–May)
 
+---------------------------------
 
 ### Revenue & Trips Contribution
 
@@ -256,6 +275,8 @@ Insight :
 
     - Indore: –2.40% (–1,044 trips)
 
+------------------------------------
+
 #### 2️⃣ New Passenger Target Achievement
 
 - Top Performing Cities : These cities exceeded their new passenger acquisition targets:
@@ -284,17 +305,23 @@ Insight :
 
     - New passenger targets: +13.52%
 
+----------------------------------
+
 #### 3️⃣ Passenger Rating Target Achievement
 
 - Achieved Target Rating : Jaipur, Mysore, Kochi
 
 - Missed Rating Targets : Most other cities, including Coimbatore despite strong trip and passenger performance.
 
+------------------------------
+
 #### Demand Seasonality by City
 
 - Peak Months : February, May, April
 
 - Low Months : June, January
+
+---------------------------------
 
 #### Repeat Trip Frequency 
 
@@ -306,12 +333,16 @@ Insight :
 
 - Kochi: 47% 2-trips, 24% 3-trips
 
+--------------------------
+
 #### Cities with weak loyalty :
 
 - Lucknow, Surat, Vadodara < 10% in 2-trips
 
 Insight:
 Some cities have high multi-trip repeat potential—ideal for subscription plans.
+
+-------------------------------
 
 #### Business vs Tourism City Categories
 
@@ -324,6 +355,8 @@ Some cities have high multi-trip repeat potential—ideal for subscription plans
 Insight:
 Business cities drive stable weekday revenue / tourism cities fuel weekend and seasonal peaks.
 
+-------------------------
+
 #### Target Summary (Company-Level)
 
 - Total Trips: 426K vs Target 429K → Slight miss
@@ -332,6 +365,7 @@ Business cities drive stable weekday revenue / tourism cities fuel weekend and s
 
 - Passenger Rating: 7.6 vs 7.9 → Quality gap
 
+-------------------------------------
 
 #### 🔷 4. Strategic Recommendations for Goodcabs
 
