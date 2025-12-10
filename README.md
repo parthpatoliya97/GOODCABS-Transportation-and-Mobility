@@ -718,12 +718,9 @@ Identify the top 3 and bottom 3 cities by total trips over the entire analysis p
 ![bottom 3](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/bottom_3_city_by_total_trips.png?raw=true)
 
 
+-------------------------------
 
-
-
-
-
-8. Highest and Lowest Repeat Passenger Rate (RPR%) by City and Month
+2. Highest and Lowest Repeat Passenger Rate (RPR%) by City and Month
 By City: Analyse the Repeat Passenger Rate (RPR%) for each city across the six-month period. Identify the top 2 and bottom 2 cities based on their RPR% to determine which locations have the strongest and weakest rates.
 
 By Month: Similarly, analyse the RPR% by month across all cities and identify the months with the highest and lowest repeat passenger rates.
@@ -759,6 +756,7 @@ group by monthname(d.start_of_month)
 ```
 ![month repeat](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/monthly%20repeat%20passenger%25.png?raw=true)
 
+------------------------------------
 
 3. Average Ratings by City and Passenger Type
 Calculate the average passenger and driver ratings for each city, segmented by passenger type (new vs. repeat). Identify cities with the highest and lowest average ratings.
@@ -776,6 +774,9 @@ group by c.city_name;
 ```
 ![passenger rating](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_driver_passenger_rating.png?raw=true)
 
+-------------------------------
+
+4.average_fare_per_trip and revenue by city
 
 ```sql
 select
@@ -789,6 +790,10 @@ group by c.city_name
 order by avg_fare_per_trip desc;
 ```
 ![city revenue](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_avg_fare_per_trip.png?raw=true)
+
+-------------------------------
+
+5. city wise revenue and average fare per trip based on day type 
 
 ```sql
 select
@@ -806,12 +811,15 @@ order by c.city_name;
 ```
 ![city day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/city_weekday_weekend_revenue_split.png?raw=true)
 
+-----------------------------
+
+6. weekday vs weekend revenue & average fare per trip
+
 ```sql
 select 
    d.day_type,
     ROUND(SUM(t.fare_amount) / 1000000, 2) AS revenue_in_millions,
     ROUND(AVG(t.fare_amount), 2) AS avg_fare_per_trip,
-	ROUND(SUM(t.fare_amount)/(select sum(fare_amount) from fact_trips)*100,2) as revenue_contribution_pct
 from fact_trips t 
 join dim_date d 
 on t.date=d.start_of_month
@@ -819,7 +827,9 @@ group by d.day_type;
 ```
 ![day type](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/weekday_weekend_revenue_fare_trip.png?raw=true)
 
+-------------------------------------
 
+7. weekday vs weekend new & repeat passengers
 ```sql
 select
 d.day_type,
