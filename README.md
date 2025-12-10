@@ -427,12 +427,6 @@ However, with targeted strategies in pricing, loyalty programs, service quality,
 
 ---------------------------------------------
 
-## Data Model View :
-
-![goodcabs data model view](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Data%20Model%20View.png?raw=true)
-
-----------------------
-
 #### Business Request - 1: City-Level Fare and Trip Summary Report
 - Generate a report that displays the total trips, average fare per km, average fare per trip, and the percentage contribution of each city's trips to the overall trips. This report will help in assessing trip volume, pricing efficiency, and each city's contribution to the overall trip count.
 
