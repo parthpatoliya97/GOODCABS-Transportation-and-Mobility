@@ -27,6 +27,15 @@ focusing on:
 
 -  Operational Performance KPIs
 
+-------------------------------
+- Analysis was conducted on 6 months (January - June) data
+
+= Max Trip Distance - 45Km
+
+- Min Trip Distance - 5Km
+
+- Trip Category : Short(5-15), Medium(16-30), Long(31-45)
+
 ----------------------------------------
 
 ## 🔷 1. Trip Performance Insights : 
@@ -360,70 +369,6 @@ Business cities drive stable weekday revenue / tourism cities fuel weekend and s
 - Passenger Rating: 7.6 vs 7.9 → Quality gap
 
 -------------------------------------
-
-#### 🔷 4. Strategic Recommendations for Goodcabs
-
-Based on insights, here is a CEO-level actionable roadmap:
-
-A. Improve New Customer Acquisition
-
-Launch intro-offers in low-acquisition cities (Mysore, Jaipur, Visakhapatnam).
-
-Partner with malls, colleges, and hotels in tourism cities.
-
-B. Strengthen Repeat Passenger Loyalty
-
-Introduce subscription plans in high-repeat cities (Visakhapatnam, Mysore, Kochi).
-
-Offer reward points for frequent travelers.
-
-C. Service Quality Enhancement
-
-Target low-rated cities: Vadodara, Surat, Lucknow
-
-Introduce driver refresher training
-
-Incentivize drivers with rating-based bonuses
-
-D. Optimize Pricing Strategy
-
-Reduce fare gaps in low-cost cities (Surat, Vadodara)
-
-Introduce dynamic weekend pricing in tourism cities
-
-E. City Category Optimization
-
-Business Cities: Lucknow, Surat, Indore
-
-Focus on corporate tie-ups
-
-Weekday peak staffing
-
-Tourism Cities: Jaipur, Kochi, Mysore
-
-Weekend surge fleets
-
-Tourist seasonal packages
-
-F. Meet Future Targets Through Data-Driven Planning
-
-Redistribute drivers from oversupplied to undersupplied cities
-
-Improve new passenger onboarding funnel
-
-Increase marketing efforts in low-revenue cities
-
-🔷 5. Final Summary
-
-Goodcabs shows strong trip volume and growing loyalty, but faces challenges in:
-
-New customer acquisition
-
-Service quality in key cities
-
-Meeting targets for new passengers and ratings
-
-However, with targeted strategies in pricing, loyalty programs, service quality, city-level optimization, and seasonal planning, Goodcabs can strongly accelerate toward its 2024 performance goals.
 
 ---------------------------------------------
 
