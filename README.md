@@ -29,216 +29,210 @@ focusing on:
 
 ----------------------------------------
 
-🔷 1. Trip Performance Insights
-1.1 Trip Distribution by City
+### 🔷 1. Trip Performance Insights : 
 
-Top-performing cities by total trips:
+#### Trip Distribution by City
 
-Jaipur – 76.9K (Strongest city)
+- Top-performing cities by total trips:
 
-Lucknow – 64.3K
+    - Jaipur – 76.9K (Strongest city)
 
-Surat – 54.8K
+    - Lucknow – 64.3K
 
-Kochi – 50.7K
+    - Surat – 54.8K
 
-Indore – 42.4K
+    - Kochi – 50.7K
 
+    - Indore – 42.4K
 
-Low-performing cities:
+- Low-performing cities:
 
-Chandigarh – 38.9K
+    - Chandigarh – 38.9K
 
-Vadodara – 32K
+    - Vadodara – 32K
 
-Visakhapatnam – 28.3K
+    - Visakhapatnam – 28.3K
 
-Coimbatore – 21.1K
+    - Coimbatore – 21.1K
 
-Mysore – 16.2K (lowest)
+    - Mysore – 16.2K (lowest)
 
-Strategic Observation:
-Jaipur, Lucknow, and Surat are core revenue centers; Mysore, Coimbatore, and Visakhapatnam require targeted interventions to boost demand.
+#### Observation:
+- Jaipur, Lucknow, and Surat are core revenue centers / Mysore, Coimbatore, and Visakhapatnam require targeted interventions to boost demand.
 
-1.2 Month-wise Trip Demand Trend
+#### Month-wise Trip Demand Trend 
 
-Peak Months: February – 75.4K
+- Peak Month : February – 75.4K
 
-Dip in June: 62.5K (seasonal slowdown)
+- Dip in June: 62.5K (seasonal slowdown)
 
-Implication:
-Demand consistently softens toward the later months, indicating potential seasonality or competition impact.
+#### Implication:
+- Demand consistently softens toward the later months, indicating potential seasonality or competition impact.
 
-1.3 Weekday vs. Weekend Trips
+#### Weekday vs Weekend Trips
 
-Weekdays: 238K (44%)
+- Weekdays: 238K (44%)
 
-Weekends: 188K (56%)
+- Weekends: 188K (56%)
 
-Key Insight:
+#### Insight:
 Weekends drive higher trip activity—marketing and pricing strategies should be weekend-focused.
 
-1.4 Trip Distribution by Category
+#### Trip Distribution by Category
 
-Medium Trips: 182K (43%)
+- Medium Trips: 182K (43%)
 
-Short Trips: 179K (42%)
+- Short Trips: 179K (42%)
 
-Long Trips: 65K (15%)
+- Long Trips: 65K (15%)
 
-Implication:
-Short and medium-distance rides dominate—ideal for dynamic pricing and local driver staffing optimization.
+#### Implication:
+- Short and medium-distance rides dominate—ideal for dynamic pricing and local driver staffing optimization.
 
-1.5 City Performance by Day Type
+#### City Performance by Day Type
 
-Examples:
+- Jaipur: Weekday 32K vs Weekend 44K → Strong tourism/weekend demand
 
+- Mysore: Weekend 10K vs Weekday 6K  → Tourism-centric
 
-Jaipur: Weekday 32K vs Weekend 44K → Strong tourism/weekend demand
+- kochi : Weekend 28k vs Weekday 23k → Tourism Centric
 
-Mysore: Weekend-driven (10K vs 6K) → Tourism-centric
+- Lucknow: Weekday-driven (50K vs 15K) → Business hub
 
-kochi : Weekend driven(28k vs 23k) ->Tourism Centric
+#### Strategy :
+- Categorize cities as Business Cities vs Tourism Cities and optimize driver allocation accordingly.
 
-rest other cities shows the weekdays higher trips due to its business category
+#### Fare, Distance & Revenue
 
-Lucknow: Weekday-driven (50K vs 15K) → Business commuting hub
+- Average Fare Per Trip
 
-Strategy:
-Categorize cities as Business Cities vs Tourism Cities and optimize driver allocation accordingly.
+    - Highest: Jaipur – ₹483.92
 
-1.6 Fare, Distance & Revenue
-Average Fare Per Trip
+    - Lowest: Surat – ₹117.27
 
-Highest: Jaipur – ₹483.92
+- Average Trip Distance
 
-Lowest: Surat – ₹117.27
+    - Highest: Jaipur – 30 km
 
-Average Trip Distance
+    - Lowest: Surat – 11 km
 
-Highest: Jaipur – 30 km
+- Fare Per KM
 
-Lowest: Surat – 11 km
+    - Highest: Jaipur – ₹16.12
 
-Fare Per KM
+    - Lowest: Vadodara – ₹10.29
 
-Highest: Jaipur – ₹16.12
+- Total Revenue Contribution
 
-Lowest: Vadodara – ₹10.29
+    - Highest: Jaipur – ₹37.21M
 
-Total Revenue Contribution
+    - Lowest: Coimbatore – ₹3.52M
 
-Highest: Jaipur – ₹37.21M
+- Mysore is a tourism city, but compared to other tourism hubs, it ranks in the bottom 3 with the lowest revenue at just 4M.
 
-Lowest: Coimbatore – ₹3.52M
+#### Insight :
+- Jaipur is the economic engine for Goodcabs / low-cost cities like Surat and Vadodara need fare restructuring.
 
-Mysore is a tourism city but it is only one city compare to other tourism city which has the lowest revenue it is in the bottom 3 revenue 4M
+#### Monthly Revenue Trend
 
-Insight:
-Jaipur is the economic engine for Goodcabs; low-cost cities like Surat and Vadodara need fare restructuring.
+- Peak: February – ₹19.9M
 
-1.7 Monthly Revenue Trend
+- Lowest: June – ₹15.4M
 
-Peak: February – ₹19.9M
+- Revenue follows trip demand — highlighting seasonal fluctuation.
 
-Lowest: June – ₹15.4M
+#### Driver Rating by City
 
-Revenue follows trip demand—highlighting seasonal fluctuation.
+- Top Rated: Kochi, Visakhapatnam, Jaipur, Mysore – 8.9
 
-1.8 Driver Rating by City
+- Low Rated: Vadodara, Lucknow, Surat – 6.6
 
-Top Rated: Kochi, Visakhapatnam, Jaipur, Mysore – 8.9
+---------------------------------------
 
-Low Rated: Vadodara, Lucknow, Surat – 6.6
+####🔷 2. Passenger Performance Insights
 
-Strategic Concern:
-Cities with low ratings ALSO have lower repeat rates—service quality is impacting retention.
+#### Repeat Passenger Rate by City
 
-🔷 2. Passenger Performance Insights
-2.1 Repeat Passenger Rate by City
+- Top repeat-passenger cities:
 
-Top repeat-passenger cities:
+    - Surat – 42.63% (Highest)
 
-Surat – 42.63% (Highest)
+    - Lucknow – 37.12%
 
-Lucknow – 37.12%
+    - Indore – 32.68%
 
-Indore – 32.68%
+    - Vadodara – 30.03%
 
-Vadodara – 30.03%
+    - Visakhapatnam – 28.61%
 
-Visakhapatnam – 28.61%
+- Lowest retention cities:
 
-Lowest retention cities:
+    - Coimbatore – 23.05%
 
-Coimbatore – 23.05%
+    - Kochi – 22.40%
 
-Kochi – 22.40%
+    - Chandigarh – 21.14%
 
-Chandigarh – 21.14%
+    - Jaipur – 17.43%
 
-Jaipur – 17.43%
+    - Mysore – 11.23% (Lowest)
 
-Mysore – 11.23% (Lowest)
+Insight :
+- Despite Jaipur having the highest trips, its repeat passenger rate is very low, indicating service gaps or fare sensitivity.
 
-Strategic Interpretation:
-Despite Jaipur having the highest trips, its repeat passenger rate is very low, indicating service gaps or fare sensitivity.
+#### Passenger Rating by City
 
-2.2 Passenger Rating by City
+- Highest: Mysore, Jaipur, Kochi, Visakhapatnam – 8.6
 
-Highest: Mysore, Jaipur, Kochi, Visakhapatnam – 8.6
+- Lowest: Vadodara, Lucknow, Surat – 6.5
 
-Lowest: Vadodara, Lucknow, Surat – 6.5
+#### Insight:
+- Low-rating cities correlate with weaker customer loyalty and higher churn risk.
 
-Insight:
-Low-rating cities correlate with weaker customer loyalty and higher churn risk.
+#### New vs Repeat Passengers (City-wise)
 
-2.3 New vs Repeat Passengers (City-wise)
+#### Top 3 Cities :
 
-Example:
+- Jaipur : New 46K | Repeat 10K
 
-top 3 
-Jaipur: New 46K | Repeat 10K
+- Kochi : New 26K | Repeat 8K
 
-Kochi: New 26K | Repeat 8K
+- Chandigarh : New 19k | Repeat 5k
 
-Chandigarh : New 19k | Repeat 5k
+#### Bottom 3 City :
 
-bottom 3 
+- Surat : New 12K | Repeat 9K
+  
+- Vadodara : New 10k | Repeat 4k
+  
+- Coimbatore : New 9k | Repeat 3k
 
-Surat: New 12K | Repeat 9K
-Vadodara : New 10k | Repeat 4k
-Coimbatore : New 9k | Repeat 3k
 
-Interpretation:
-Some cities rely heavily on new customer acquisition, while others (e.g., Surat) have a balanced mix due to high repeat behavior.
+#### New vs Repeat Passengers (Monthly)
 
-2.4 New vs Repeat Passengers (Monthly)
+- New passengers decline from 36K → 22K
 
-New passengers decline from 36K → 22K
+- Repeat passengers grow from 8K → 12K (Jan–May)
 
-Repeat passengers grow from 8K → 12K (Jan–May)
 
-Insight:
-Customer acquisition is slowing, but loyalty is increasing—indicating stable long-term revenue potential.
+#### Revenue & Trips Contribution
 
-2.5 Revenue & Trips Contribution
+- Repeat passengers contribute more revenue (51%) than new passengers (49%)
 
-Repeat passengers contribute more revenue (51%) than new passengers (49%)
+####Trips :
 
-Trips:
+- Repeat : 249K (58%)
 
-Repeat: 249K (58%)
+- New : 177K (42%)
 
-New: 177K (42%)
+#### Insight:
+- Repeat customers are the financial backbone
 
-Critical Insight:
-Repeat customers are the financial backbone—loyalty programs will significantly boost revenue.
+-------------------------
 
-🔷 3. Target & Operational Performance Insights
-3.1 City-level Target Achievement (from image)
+#### 🔷 3. Target & Operational Performance Insights :
 
-Examples:
+#### City-level Target Achievement 
 
 Jaipur exceeded trip targets by +13.9% but missed the new passengers by -15% 
 
@@ -254,80 +248,78 @@ Surat underperformed by –3.7%
 
 Kochi slightly above target (+2.4%)
 
-Mysore 20.28%
-Jaipur 13.91%
-Kochi 2.43%
-Coimbatore 0.50%
+- by Total Trips :
+    - Mysore 20.28%
+    - Jaipur 13.91%
+    - Kochi 2.43%
+    - Coimbatore 0.50%
 
 
 New Passenger Target Deviation:
 
-Coimbatore 13.52%
-Surat 10.72%
-Indore 5.41%
-Lucknow 4.23%
-Vadodara 2.29%
+- by Total New Passengers
+    - Coimbatore 13.52%
+    - Surat 10.72%
+    - Indore 5.41%
+    - Lucknow 4.23%
+    - Vadodara 2.29%
 
 Multiple cities fell short (e.g., Jaipur –15%, Chandigarh –10%)
 
 Only a few cities exceeded new passenger targets (Indore +5.4%, Vadodara +2.3%)
 
-jaipur,mysore,kochi achieved the target rating other cities are fall short to achieve it
+by Passenger Rating
+
+- jaipur,mysore,kochi achieved the target rating
+- other cities are fall short to achieve it
 
 Insight:
 Growth targets were missed mainly due to new customer acquisition gaps, not trip volume.
 
-3.2 Demand Seasonality by City
+#### Demand Seasonality by City
 
-From image:
+- Peak Months : February, May, April
 
-Peak Months: Mostly February, May, April
+- Low Months : June, January
 
-Low Months: Mostly June, January
+#### Repeat Trip Frequency 
 
-Insight:
-Seasonal planning and driver allocation should be optimized by city.
+#### Cities with extremely strong loyalty :
 
-3.3 Repeat Trip Frequency (from image)
+- Visakhapatnam : 51% in 2-trips, 25% in 3-trips
 
-Cities with extremely strong loyalty:
+- Mysore: 48% 2-trips, 24% 3-trips
 
-Visakhapatnam: 51% in 2-trips, 25% in 3-trips
+- Kochi: 47% 2-trips, 24% 3-trips
 
-Mysore: 48% 2-trips, 24% 3-trips
+#### Cities with weak loyalty :
 
-Kochi: 47% 2-trips, 24% 3-trips
-
-Cities with weak loyalty:
-
-Lucknow, Surat, Vadodara < 10% in 2-trips
+- Lucknow, Surat, Vadodara < 10% in 2-trips
 
 Insight:
 Some cities have high multi-trip repeat potential—ideal for subscription plans.
 
-3.4 Business vs Tourism City Categories
+#### Business vs Tourism City Categories
 
-Total Trips:
+- Total Trips:
 
-Business: 243K (57%)
+    - Business: 243K (57%)
 
-Tourism: 183K (43%)
+    - Tourism: 183K (43%)
 
 Insight:
 Business cities drive stable weekday revenue; tourism cities fuel weekend and seasonal peaks.
 
-3.5 Target Summary (Company-Level)
+#### Target Summary (Company-Level)
 
-Total Trips: 426K vs Target 429K → Slight miss
+- Total Trips: 426K vs Target 429K → Slight miss
 
-New Passengers: 177K vs 185K → Missed target
+- New Passengers: 177K vs 185K → Missed target
 
-Passenger Rating: 7.6 vs 7.9 → Quality gap
+- Passenger Rating: 7.6 vs 7.9 → Quality gap
 
-Corporate-Level Gap:
-Goodcabs needs improvement in customer acquisition & service quality to meet its 2024 goals.
 
-🔷 4. Strategic Recommendations for Goodcabs
+#### 🔷 4. Strategic Recommendations for Goodcabs
 
 Based on insights, here is a CEO-level actionable roadmap:
 
