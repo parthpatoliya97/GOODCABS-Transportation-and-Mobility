@@ -30,11 +30,16 @@ focusing on:
 -------------------------------
 - Analysis was conducted on 6 months (January - June) data
 
-= Max Trip Distance - 45Km
+- Max Trip Distance - 45Km
 
 - Min Trip Distance - 5Km
 
 - Trip Category : Short(5-15), Medium(16-30), Long(31-45)
+
+#### City Category :
+- Tourism City : Jaipur, Kochi, Chandigarh, Mysore
+
+- Business City : Lucknow, Surat, Indore, Vadodara, Visakhapatnam, Coimbatore  
 
 ----------------------------------------
 
