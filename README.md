@@ -400,7 +400,7 @@ SELECT
     ROUND(total_trips*100 / (SELECT COUNT(*) FROM fact_trips), 2) AS contribution_to_total_trips
 FROM city_stats;
 ```
-![request 1](https://app.powerbi.com/view?r=eyJrIjoiMWYyM2ZkNmMtNGQ4Yi00N2VhLTljMjgtNWU0NzUxMjkwNDRmIiwidCI6IjJhYmVkYTA4LTMyOGEtNGFlMy1iYTg1LThiNzIxZmE1Mzg3OSJ9)
+![request 1](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Business%20Request-1.png?raw=true)
 
 ------------------------------------
 
