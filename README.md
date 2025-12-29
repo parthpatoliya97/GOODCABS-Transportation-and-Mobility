@@ -791,7 +791,8 @@ group by d.day_type;
 
 ## Dashboard View :-
 
-Live Dashboard Link :- [Click Here](https://app.powerbi.com/view?r=eyJrIjoiNDIyZGM1MDAtZTgyOC00NWQ1LThmM2YtMTA3MmMwZmUzNDEyIiwidCI6IjJhYmVkYTA4LTMyOGEtNGFlMy1iYTg1LThiNzIxZmE1Mzg3OSJ9)
+Live Dashboard Link :- [Click Here](
+https://app.powerbi.com/view?r=eyJrIjoiNDliZDQwMzUtYzVlZC00N2Q4LWFjMTAtNjA1MmY0OWU3Mzg2IiwidCI6IjJhYmVkYTA4LTMyOGEtNGFlMy1iYTg1LThiNzIxZmE1Mzg3OSJ9)
 
 ### Data Model View :
 ![data model](https://github.com/parthpatoliya97/GOODCABS-Transportation-and-Mobility/blob/main/Images/Data%20Model%20View.png?raw=true)
