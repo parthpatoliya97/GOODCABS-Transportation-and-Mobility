@@ -285,3 +285,48 @@ FROM
 ORDER BY
     city_name,
     month; 
+
+
+-- for each city in each monthly target difference percentage
+WITH trip_performance AS (
+    SELECT
+        c.city_name,
+        d.month_name,
+        ROUND(
+            ((COUNT(t.trip_id) - mt.total_target_trips) * 100.0)
+            / mt.total_target_trips,
+            2
+        ) AS pct_difference
+    FROM trips_db.fact_trips t
+    JOIN trips_db.dim_date d
+        ON t.date = d.date
+    JOIN targets_db.monthly_target_trips mt
+        ON t.city_id = mt.city_id
+       AND d.start_of_month = mt.month
+    JOIN trips_db.dim_city c
+        ON t.city_id = c.city_id
+    GROUP BY
+        c.city_name,
+        d.month_name,
+        mt.total_target_trips
+)
+
+SELECT
+    month_name AS Month,
+
+    MAX(CASE WHEN city_name = 'Chandigarh' THEN pct_difference END) AS Chandigarh,
+    MAX(CASE WHEN city_name = 'Coimbatore' THEN pct_difference END) AS Coimbatore,
+    MAX(CASE WHEN city_name = 'Indore' THEN pct_difference END) AS Indore,
+    MAX(CASE WHEN city_name = 'Jaipur' THEN pct_difference END) AS Jaipur,
+    MAX(CASE WHEN city_name = 'Kochi' THEN pct_difference END) AS Kochi,
+    MAX(CASE WHEN city_name = 'Lucknow' THEN pct_difference END) AS Lucknow,
+    MAX(CASE WHEN city_name = 'Mysore' THEN pct_difference END) AS Mysore,
+    MAX(CASE WHEN city_name = 'Surat' THEN pct_difference END) AS Surat,
+    MAX(CASE WHEN city_name = 'Vadodara' THEN pct_difference END) AS Vadodara,
+    MAX(CASE WHEN city_name = 'Visakhapatnam' THEN pct_difference END) AS Visakhapatnam
+
+FROM trip_performance
+GROUP BY month_name
+ORDER BY
+    FIELD(month_name,
+        'January','February','March','April','May','June');
