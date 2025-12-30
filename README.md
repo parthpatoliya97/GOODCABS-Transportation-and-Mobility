@@ -328,24 +328,15 @@ Insight :
 
 ---------------------------------
 
-#### Repeat Trip Frequency 
+### Repeat Trip Frequency :
 
-#### Cities with extremely strong loyalty :
-
-- Visakhapatnam : 51% in 2-trips, 25% in 3-trips
-
-- Mysore: 48% 2-trips, 24% 3-trips
-
-- Kochi: 47% 2-trips, 24% 3-trips
-
---------------------------
-
-#### Cities with weak loyalty :
-
-- Lucknow, Surat, Vadodara < 10% in 2-trips
-
-Insight:
-Some cities have high multi-trip repeat potential—ideal for subscription plans.
+- Jaipur, Kochi, Mysore, Visakhapatnam - show high 2-3 trip repeat rates, Retention drops drastically after the 3rd trip
+  
+- Chandigarh maintains consistency - steady repeat frequency across the 2–8 trip range, indicating a highly reliable customer base.
+  
+- Coimbatore, Lucknow, Surat, Vadodara dominate the 4–8 trip frequency segment, showing deeper market penetration & habitual usage patterns.
+  
+- Business cities show stronger repeat behavior, while tourism cities drive volume but struggle with retention
 
 -------------------------------
 
