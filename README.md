@@ -71,9 +71,6 @@ focusing on:
 
     - Mysore – 16.2K (lowest)
 
-#### Observation:
-- Jaipur, Lucknow, and Surat are core revenue centers / Mysore, Coimbatore, and Visakhapatnam require targeted interventions to boost demand.
-
 ----------------------
 
 ### Month-wise Trip Demand Trend 
@@ -145,9 +142,9 @@ focusing on:
 
     - Lowest: Coimbatore – ₹3.52M
 
+#### Insight :
 - Mysore is a tourism city, but compared to other tourism hubs, it ranks in the bottom 3 among all with the lowest revenue at just 4M.
 
-#### Insight :
 - Jaipur is the economic engine for Goodcabs / low-cost cities like Surat and Vadodara need fare restructuring.
 
 -----------------------------
@@ -373,9 +370,7 @@ Business cities drive stable weekday revenue / tourism cities fuel weekend and s
 
 - Passenger Rating: 7.6 vs 7.9 → Quality gap
 
--------------------------------------
-
----------------------------------------------
+--------------------------------------------------
 
 #### Business Request - 1: City-Level Fare and Trip Summary Report
 - Generate a report that displays the total trips, average fare per km, average fare per trip, and the percentage contribution of each city's trips to the overall trips. This report will help in assessing trip volume, pricing efficiency, and each city's contribution to the overall trip count.
